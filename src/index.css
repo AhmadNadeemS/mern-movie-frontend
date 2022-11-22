@@ -1,0 +1,207 @@
+:root {
+  /* colors */
+  --primary-50: #e0fcff;
+  --primary-100: #bef8fd;
+  --primary-200: #87eaf2;
+  --primary-300: #54d1db;
+  --primary-400: #38bec9;
+  --primary-500: #2cb1bc;
+  --primary-600: #14919b;
+  --primary-700: #0e7c86;
+  --primary-800: #0a6c74;
+  --primary-900: #044e54;
+
+  /* grey */
+  --grey-50: #f0f4f8;
+  --grey-100: #d9e2ec;
+  --grey-200: #bcccdc;
+  --grey-300: #9fb3c8;
+  --grey-400: #829ab1;
+  --grey-500: #627d98;
+  --grey-600: #486581;
+  --grey-700: #334e68;
+  --grey-800: #243b53;
+  --grey-900: #102a43;
+  /* rest of the colors */
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+
+  /* fonts  */
+  --headingFont: "Roboto Condensed", Sans-Serif;
+  --bodyFont: "Cabin", Sans-Serif;
+  --small-text: 0.875rem;
+  --extra-small-text: 0.7em;
+  /* rest of the vars */
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-900);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 500px;
+  --fluid-width: 90vw;
+  --breakpoint-lg: 992px;
+  --nav-height: 6rem;
+  /* box shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.alert {
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 1rem;
+  border-color: transparent;
+  border-radius: var(--borderRadius);
+  text-align: center;
+  letter-spacing: var(--letterSpacing);
+}
+
+.alert-danger {
+  color: var(--red-dark);
+  background: var(--red-light);
+}
+.alert-success {
+  color: var(--green-dark);
+  background: var(--green-light);
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+.spin-button-none::-webkit-inner-spin-button,
+.spin-button-none::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+/* html {
+  overflow-y: overlay;
+}
+
+.element-class {
+  scrollbar-gutter: stable both-edges;
+} */
+
+.bounce-custom {
+  animation: bounce-custom 0.5s;
+}
+@keyframes bounce-custom {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+.animate-scale {
+  transform-origin: 0% 0%;
+  animation: scale 0.2s;
+}
+
+.animate-scale-reverse {
+  transform-origin: 0% 0%;
+  animation: scale 0.2s reverse forwards;
+}
+
+@keyframes scale {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.custom-scroll-bar::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+/* Track */
+.custom-scroll-bar::-webkit-scrollbar-track {
+  background: #222222;
+}
+
+/* Handle */
+.custom-scroll-bar::-webkit-scrollbar-thumb {
+  background: rgb(224, 201, 251);
+}
+
+/* Handle on hover */
+.custom-scroll-bar::-webkit-scrollbar-thumb:hover {
+  background: rgb(143, 190, 245);
+}
+
+/* for our slide show */
+.slide-in-from-right {
+  animation: slideInFromRight 0.5s ease-in;
+}
+
+.slide-out-to-left {
+  animation: slideOutToLeft 0.5s ease-in;
+}
+
+.slide-in-from-left {
+  animation: slideInFromLeft 0.5s ease-in;
+}
+
+.slide-out-to-right {
+  animation: slideOutToRight 0.5s ease-in;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
